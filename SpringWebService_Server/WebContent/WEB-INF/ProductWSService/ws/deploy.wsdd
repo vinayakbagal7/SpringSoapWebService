@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ProductWSService WSDL service -->
+
+  <service name="ProductWS" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws"/>
+      <parameter name="wsdlServiceElement" value="ProductWSService"/>
+      <parameter name="schemaQualified" value="http://ws,http://entities"/>
+      <parameter name="wsdlServicePort" value="ProductWS"/>
+      <parameter name="className" value="ws.ProductWS"/>
+      <parameter name="wsdlPortType" value="ProductWS"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ws" xmlns:retNS="http://ws" xmlns:rtns="http://entities" name="find" qname="operNS:find" returnQName="retNS:findReturn" returnType="rtns:Product" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="find"/>
+
+      <typeMapping xmlns:ns="http://entities" qname="ns:Product" type="java:entities.Product" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle=""/>
+  </service>
+</deployment>

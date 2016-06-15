@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/java/entities/Product.java=UTF-8
+encoding//src/main/java/ws/HelloWS.java=UTF-8
+encoding//src/main/java/ws/HelloWSService.java=UTF-8
+encoding//src/main/java/ws/HelloWSServiceLocator.java=UTF-8
+encoding//src/main/java/ws/HelloWSSoapBindingStub.java=UTF-8
+encoding//src/main/java/ws/ProductWS.java=UTF-8
+encoding//src/main/java/ws/ProductWSService.java=UTF-8
+encoding//src/main/java/ws/ProductWSServiceLocator.java=UTF-8
+encoding//src/main/java/ws/ProductWSSoapBindingStub.java=UTF-8
